@@ -1,7 +1,7 @@
 extends Node
 
-@onready var subviewport_emotion:SubViewport =  $GridContainer/SubViewportContainer/SubViewportEmotion
-@onready var subviewport_reason:SubViewport = $GridContainer/SubViewportContainer2/SubViewportReason
+@onready var subviewport_emotion:SubViewport =  $PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion
+@onready var subviewport_reason:SubViewport = $PlayerViewports/SubViewportContainerReason/SubViewportReason
 
 
 # Called when the node enters the scene tree for the first time.
