@@ -11,21 +11,21 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("emotion_move_right"):
+	if Input.is_action_pressed("reason_move_right"):
 		velocity.x += 1
-	if Input.is_action_pressed("emotion_move_left"):
+	if Input.is_action_pressed("reason_move_left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("emotion_move_down"):
+	if Input.is_action_pressed("reason_move_down"):
 		velocity.y += 1
-	if Input.is_action_pressed("emotion_move_up"):
+	if Input.is_action_pressed("reason_move_up"):
 		velocity.y -= 1
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		$SpritePlayerEmotion.play()
+		$SpritePlayerReason.play()
 	else:
-		$SpritePlayerEmotion.stop()
+		$SpritePlayerReason.stop()
 	position += velocity * delta
 	if velocity.x != 0:
-		$SpritePlayerEmotion.animation = "walk"
+		$SpritePlayerReason.animation = "walk"
 	else:
-		$SpritePlayerEmotion.animation = "idle"
+		$SpritePlayerReason.animation = "idle"
