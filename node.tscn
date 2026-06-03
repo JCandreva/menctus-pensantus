@@ -94,35 +94,36 @@ render_target_update_mode = 4
 [node name="Node2D" type="Node2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion" unique_id=256805196]
 
 [node name="PlayerEmotion" type="Area2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D" unique_id=2009294725]
+position = Vector2(41, 97)
 script = ExtResource("2_e2u21")
+
+[node name="Camera2DEmotion" type="Camera2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D/PlayerEmotion" unique_id=445415239]
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
+position_smoothing_enabled = true
 
 [node name="CollisionShape2DEmotion" type="CollisionShape2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D/PlayerEmotion" unique_id=103865719]
 shape = SubResource("CapsuleShape2D_j2q8x")
 
 [node name="SpritePlayerEmotion" type="AnimatedSprite2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D/PlayerEmotion" unique_id=1213652725]
-position = Vector2(380.75, 225.1875)
-scale = Vector2(0.5625, 0.5625)
+scale = Vector2(0.563, 0.563)
 sprite_frames = SubResource("SpriteFrames_112p8")
 animation = &"walk"
-offset = Vector2(-380, -75)
-
-[node name="Camera2DEmotion" type="Camera2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D/PlayerEmotion/SpritePlayerEmotion" unique_id=445415239]
-position = Vector2(-676.8889, -400.33334)
-scale = Vector2(1.7777778, 1.7777778)
-position_smoothing_enabled = true
 
 [node name="PlayerReason" type="Area2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D" unique_id=2041445473]
+position = Vector2(86, 100)
 script = ExtResource("4_e2u21")
 
 [node name="CollisionShape2DEmotion" type="CollisionShape2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D/PlayerReason" unique_id=109314030]
 shape = SubResource("CapsuleShape2D_112p8")
 
 [node name="SpritePlayerReason" type="AnimatedSprite2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D/PlayerReason" unique_id=1302134061]
-position = Vector2(1011, 315)
 scale = Vector2(0.5625, 0.5625)
 sprite_frames = SubResource("SpriteFrames_e2u21")
 animation = &"walk"
-offset = Vector2(-380, -75)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="GridContainer/SubViewportContainer/SubViewportEmotion/Node2D/PlayerReason/SpritePlayerReason" unique_id=1771175458]
 remote_path = NodePath("../../../../../../SubViewportContainer2/SubViewportReason/Camera2DReason")
@@ -139,6 +140,11 @@ size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="Camera2DReason" type="Camera2D" parent="GridContainer/SubViewportContainer2/SubViewportReason" unique_id=1614582455]
-position = Vector2(1011, 315)
+position = Vector2(86, 100)
 scale = Vector2(0.5625, 0.5625)
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
 position_smoothing_enabled = true
