@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
+@onready var pEmotion = $"../PlayerEmotion"
+@onready var cameraEmotion = $"../Camera2DEmotion"
+@onready var mainView = $"../../../../.."
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,7 +27,13 @@ func _process(delta: float) -> void:
 		$SpritePlayerReason.play()
 	else:
 		$SpritePlayerReason.stop()
-	position += velocity * delta
+	if mainView.camera_split:
+		position += velocity * delta
+	else:
+		var newpos = position + velocity * delta
+		if abs(newpos.x - pEmotion.position.x) < (mainView.get_viewport().size.x) - 100:
+			position = newpos
+			
 	if velocity.x != 0:
 		$SpritePlayerReason.animation = "walk"
 	else:
