@@ -95,7 +95,7 @@ render_target_update_mode = 4
 
 [node name="Node2D" type="Node2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion" unique_id=256805196]
 
-[node name="PlayerEmotion" type="Area2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=2009294725]
+[node name="PlayerEmotion" type="CharacterBody2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=1659777439]
 position = Vector2(41, 97)
 script = ExtResource("2_nsbir")
 
@@ -115,7 +115,7 @@ scale = Vector2(0.563, 0.563)
 sprite_frames = SubResource("SpriteFrames_112p8")
 animation = &"walk"
 
-[node name="PlayerReason" type="Area2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=2041445473]
+[node name="PlayerReason" type="CharacterBody2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=1850028464]
 position = Vector2(86, 100)
 script = ExtResource("4_58xx4")
 
