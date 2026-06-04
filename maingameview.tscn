@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://deyhyadr4rt8u" path="res://maingameview.gd" id="1_agafp"]
 [ext_resource type="Script" uid="uid://dwqfwimxv4nhc" path="res://player_emotion.gd" id="2_nsbir"]
+[ext_resource type="Script" uid="uid://byst1fsgi8b8j" path="res://camera_2d_emotion.gd" id="2_omsv4"]
 [ext_resource type="Texture2D" uid="uid://bto3n8xn4mgkr" path="res://icon.svg" id="3_omsv4"]
 [ext_resource type="Script" uid="uid://covlxlhjev642" path="res://player_reason.gd" id="4_58xx4"]
+[ext_resource type="Script" uid="uid://2crcubqm6yd5" path="res://players_mid_point.gd" id="5_nsbir"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j2q8x"]
 
@@ -80,7 +82,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 2
 
 [node name="SubViewportContainerEmotion" type="SubViewportContainer" parent="PlayerViewports" unique_id=1389868597]
 layout_mode = 2
@@ -90,22 +91,24 @@ stretch = true
 
 [node name="SubViewportEmotion" type="SubViewport" parent="PlayerViewports/SubViewportContainerEmotion" unique_id=2095810160]
 handle_input_locally = false
-size = Vector2i(574, 648)
+size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
 [node name="Node2D" type="Node2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion" unique_id=256805196]
 
-[node name="PlayerEmotion" type="CharacterBody2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=1659777439]
+[node name="Camera2DEmotion" type="Camera2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=445415239]
 position = Vector2(41, 97)
-script = ExtResource("2_nsbir")
-
-[node name="Camera2DEmotion" type="Camera2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerEmotion" unique_id=445415239]
 limit_enabled = false
 limit_left = 0
 limit_top = 0
 limit_right = 1152
 limit_bottom = 648
 position_smoothing_enabled = true
+script = ExtResource("2_omsv4")
+
+[node name="PlayerEmotion" type="CharacterBody2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=1659777439]
+position = Vector2(41, 97)
+script = ExtResource("2_nsbir")
 
 [node name="CollisionShape2DEmotion" type="CollisionShape2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerEmotion" unique_id=103865719]
 shape = SubResource("CapsuleShape2D_j2q8x")
@@ -130,7 +133,11 @@ animation = &"walk"
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerReason/SpritePlayerReason" unique_id=1771175458]
 remote_path = NodePath("../../../../../../SubViewportContainerReason/SubViewportReason/Camera2DReason")
 
+[node name="PlayersMidPoint" type="Node2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=735122656]
+script = ExtResource("5_nsbir")
+
 [node name="SubViewportContainerReason" type="SubViewportContainer" parent="PlayerViewports" unique_id=1546927966]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -138,8 +145,8 @@ stretch = true
 
 [node name="SubViewportReason" type="SubViewport" parent="PlayerViewports/SubViewportContainerReason" unique_id=119858487]
 handle_input_locally = false
-size = Vector2i(574, 648)
-render_target_update_mode = 4
+size = Vector2i(1152, 322)
+render_target_update_mode = 0
 
 [node name="Camera2DReason" type="Camera2D" parent="PlayerViewports/SubViewportContainerReason/SubViewportReason" unique_id=1614582455]
 position = Vector2(86, 100)
@@ -170,23 +177,21 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="HUD/TopHUD/TopMiddle" unique_id=62838310]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -21.0
-offset_right = 21.0
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "HUD FUNCIONANDO POR CIMA
-DA DIVISÃO OK"
-label_settings = SubResource("LabelSettings_agafp")
-horizontal_alignment = 1
-
 [node name="TopRight" type="Control" parent="HUD/TopHUD" unique_id=1390973085]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HUD/TopHUD/TopRight" unique_id=374165780]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -143.0
+offset_top = 20.0
+offset_right = -21.0
+offset_bottom = 51.0
+grow_horizontal = 0
+text = "mudar camera"
 
 [node name="CenterHUD" type="HBoxContainer" parent="HUD" unique_id=1378977788]
 layout_mode = 2
@@ -200,6 +205,24 @@ size_flags_horizontal = 3
 [node name="CenterMiddle" type="Control" parent="HUD/CenterHUD" unique_id=1891589781]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HUD/CenterHUD/CenterMiddle" unique_id=62838310]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -25.5
+offset_right = 121.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "HUD FUNCIONANDO POR CIMA
+DA DIVISÃO OK"
+label_settings = SubResource("LabelSettings_agafp")
+horizontal_alignment = 1
 
 [node name="CenterRight" type="Control" parent="HUD/CenterHUD" unique_id=178253076]
 layout_mode = 2
@@ -221,3 +244,5 @@ size_flags_horizontal = 3
 [node name="CenterRight" type="Control" parent="HUD/BottomHUD" unique_id=1798440387]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[connection signal="button_down" from="HUD/TopHUD/TopRight/Button" to="." method="_on_button_button_down"]
