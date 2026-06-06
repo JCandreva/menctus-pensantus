@@ -1,75 +1,8 @@
 [gd_scene format=3 uid="uid://cgu2annbp65w8"]
 
 [ext_resource type="Script" uid="uid://deyhyadr4rt8u" path="res://maingameview.gd" id="1_agafp"]
-[ext_resource type="Script" uid="uid://dwqfwimxv4nhc" path="res://player_scripts/player_emotion.gd" id="2_nsbir"]
-[ext_resource type="Script" uid="uid://byst1fsgi8b8j" path="res://camera_scripts/camera_2d_emotion.gd" id="2_omsv4"]
-[ext_resource type="Texture2D" uid="uid://bto3n8xn4mgkr" path="res://icon.svg" id="3_omsv4"]
-[ext_resource type="Script" uid="uid://covlxlhjev642" path="res://player_scripts/player_reason.gd" id="4_58xx4"]
-[ext_resource type="Script" uid="uid://2crcubqm6yd5" path="res://camera_scripts/players_mid_point.gd" id="5_nsbir"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j2q8x"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_112p8"]
-atlas = ExtResource("3_omsv4")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e2u21"]
-atlas = ExtResource("3_omsv4")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_112p8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_112p8")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e2u21")
-}, {
-"duration": 1.0,
-"texture": null
-}],
-"loop": true,
-"name": &"walk",
-"speed": 16.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_112p8"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bss38"]
-atlas = ExtResource("3_omsv4")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tda05"]
-atlas = ExtResource("3_omsv4")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_e2u21"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bss38")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tda05")
-}, {
-"duration": 1.0,
-"texture": null
-}],
-"loop": true,
-"name": &"walk",
-"speed": 16.0
-}]
+[ext_resource type="PackedScene" uid="uid://cshwgj646esx2" path="res://scenes/art_gallery.tscn" id="2_cfqpw"]
+[ext_resource type="Script" uid="uid://b8fk5s2t8acea" path="res://camera_scripts/camera_2d_reason.gd" id="3_c3tgy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_agafp"]
 
@@ -94,47 +27,7 @@ handle_input_locally = false
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
-[node name="Node2D" type="Node2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion" unique_id=256805196]
-
-[node name="Camera2DEmotion" type="Camera2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=445415239]
-position = Vector2(41, 97)
-limit_enabled = false
-limit_left = 0
-limit_top = 0
-limit_right = 1152
-limit_bottom = 648
-position_smoothing_enabled = true
-script = ExtResource("2_omsv4")
-
-[node name="PlayerEmotion" type="CharacterBody2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=1659777439]
-position = Vector2(41, 97)
-script = ExtResource("2_nsbir")
-
-[node name="CollisionShape2DEmotion" type="CollisionShape2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerEmotion" unique_id=103865719]
-shape = SubResource("CapsuleShape2D_j2q8x")
-
-[node name="SpritePlayerEmotion" type="AnimatedSprite2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerEmotion" unique_id=1213652725]
-scale = Vector2(0.563, 0.563)
-sprite_frames = SubResource("SpriteFrames_112p8")
-animation = &"walk"
-
-[node name="PlayerReason" type="CharacterBody2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=1850028464]
-position = Vector2(86, 100)
-script = ExtResource("4_58xx4")
-
-[node name="CollisionShape2DEmotion" type="CollisionShape2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerReason" unique_id=109314030]
-shape = SubResource("CapsuleShape2D_112p8")
-
-[node name="SpritePlayerReason" type="AnimatedSprite2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerReason" unique_id=1302134061]
-scale = Vector2(0.5625, 0.5625)
-sprite_frames = SubResource("SpriteFrames_e2u21")
-animation = &"walk"
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerReason/SpritePlayerReason" unique_id=1771175458]
-remote_path = NodePath("../../../../../../SubViewportContainerReason/SubViewportReason/Camera2DReason")
-
-[node name="PlayersMidPoint" type="Node2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D" unique_id=735122656]
-script = ExtResource("5_nsbir")
+[node name="Node2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion" unique_id=953528959 instance=ExtResource("2_cfqpw")]
 
 [node name="SubViewportContainerReason" type="SubViewportContainer" parent="PlayerViewports" unique_id=1546927966]
 visible = false
@@ -149,14 +42,15 @@ size = Vector2i(2, 2)
 render_target_update_mode = 0
 
 [node name="Camera2DReason" type="Camera2D" parent="PlayerViewports/SubViewportContainerReason/SubViewportReason" unique_id=1614582455]
-position = Vector2(86, 100)
-scale = Vector2(0.5625, 0.5625)
+position = Vector2(-256, 16)
+scale = Vector2(7.5, 7.5)
 limit_enabled = false
 limit_left = 0
 limit_top = 0
 limit_right = 1152
 limit_bottom = 648
 position_smoothing_enabled = true
+script = ExtResource("3_c3tgy")
 
 [node name="HUD" type="VBoxContainer" parent="." unique_id=88221840]
 anchors_preset = 15

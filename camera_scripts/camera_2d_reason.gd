@@ -12,8 +12,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if target and is_instance_valid(target):
 		# Linear interpolation creates a smooth "catch-up" effect
-		if $"../../../../..".camera_split:
-			global_position = global_position.lerp(Vector2(target.global_position.x, -175), smooth_speed * delta)
+		if $"../../../..".camera_split:
+			global_position = global_position.lerp(Vector2(target.global_position.x, 175), smooth_speed * delta)
 		else: 
 			global_position = global_position.lerp(Vector2(target.global_position.x, 0), smooth_speed * delta)
 			
