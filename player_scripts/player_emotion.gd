@@ -55,3 +55,9 @@ func _physics_process(delta: float) -> void:
 		spritePlayerEmotion.animation = "walk"
 	else:
 		spritePlayerEmotion.animation = "idle"
+	
+	if !is_on_floor():
+		if velocity.y > 0:
+			spritePlayerEmotion.animation = "fall"
+		if velocity.y < 0:
+			spritePlayerEmotion.animation = "jump"
