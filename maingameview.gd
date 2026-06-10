@@ -35,3 +35,15 @@ func _on_button_button_down() -> void:
 		camera_split = false
 	else:
 		camera_split = true
+		
+		
+func _change_scene(new_scene: String) -> void:
+	$PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D.get_tree().change_scene_to_file(new_scene)
+	subviewport_reason.world_2d = subviewport_emotion.world_2d
+	
+	
+
+
+
+func _on_button_button2_down() -> void:
+	_change_scene("res://scenes/plataform.tscn")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cshwgj646esx2"]
 
 [ext_resource type="Texture2D" uid="uid://bp1qiui76ruar" path="res://assets/backgrounds/bg_gallery.png" id="1_8xmbx"]
-[ext_resource type="Script" uid="uid://byst1fsgi8b8j" path="res://camera_scripts/camera_2d_emotion.gd" id="1_qsn0b"]
+[ext_resource type="PackedScene" uid="uid://dnq7a138yavb0" path="res://player_scenes/camera_2d_emotion.tscn" id="2_k1dh8"]
 [ext_resource type="PackedScene" uid="uid://bemsv3h82magg" path="res://player_scenes/player_emotion.tscn" id="3_k1dh8"]
 [ext_resource type="PackedScene" uid="uid://y2iq0iw0q5iu" path="res://player_scenes/player_reason.tscn" id="4_qsn0b"]
 [ext_resource type="Script" uid="uid://2crcubqm6yd5" path="res://camera_scripts/players_mid_point.gd" id="6_prgsm"]
@@ -19,14 +19,7 @@ texture_filter = 1
 scale = Vector2(7.5, 7.5)
 texture = ExtResource("1_8xmbx")
 
-[node name="Camera2DEmotion" type="Camera2D" parent="." unique_id=1581230958]
-limit_enabled = false
-limit_left = 0
-limit_top = 0
-limit_right = 1152
-limit_bottom = 648
-position_smoothing_enabled = true
-script = ExtResource("1_qsn0b")
+[node name="Camera2DEmotion" parent="." unique_id=937519777 instance=ExtResource("2_k1dh8")]
 
 [node name="PlayerEmotion" parent="." unique_id=1857981925 instance=ExtResource("3_k1dh8")]
 position = Vector2(41, 97)

@@ -29,12 +29,6 @@ render_target_update_mode = 4
 
 [node name="Node2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion" unique_id=953528959 instance=ExtResource("2_cfqpw")]
 
-[node name="SpritePlayerEmotion" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerEmotion" parent_id_path=PackedInt32Array(953528959, 419620231) index="1" unique_id=1009525425]
-z_index = 1
-
-[node name="SpritePlayerReason" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D/PlayerReason" parent_id_path=PackedInt32Array(953528959, 1913781420) index="1" unique_id=1081079679]
-z_index = 1
-
 [node name="SubViewportContainerReason" type="SubViewportContainer" parent="PlayerViewports" unique_id=1546927966]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -75,6 +69,12 @@ size_flags_horizontal = 3
 [node name="TopMiddle" type="Control" parent="HUD/TopHUD" unique_id=343161208]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HUD/TopHUD/TopMiddle" unique_id=1213401745]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "next scene"
 
 [node name="TopRight" type="Control" parent="HUD/TopHUD" unique_id=1390973085]
 layout_mode = 2
@@ -144,6 +144,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
+[connection signal="button_down" from="HUD/TopHUD/TopMiddle/Button" to="." method="_on_button_button2_down"]
 [connection signal="button_down" from="HUD/TopHUD/TopRight/Button" to="." method="_on_button_button_down"]
 
 [editable path="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D"]

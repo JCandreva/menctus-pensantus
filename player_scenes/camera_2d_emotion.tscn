@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dnq7a138yavb0"]
+
+[ext_resource type="Script" uid="uid://byst1fsgi8b8j" path="res://camera_scripts/camera_2d_emotion.gd" id="1_sa1y3"]
+
+[node name="Camera2DEmotion" type="Camera2D" unique_id=937519777]
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
+position_smoothing_enabled = true
+script = ExtResource("1_sa1y3")
