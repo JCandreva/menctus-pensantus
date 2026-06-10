@@ -1,0 +1,54 @@
+extends Node2D
+ 
+@onready var platforms = {
+	0: $"../TileMapLayer_Red",
+	1: $"../TileMapLayer_Orange",
+	2: $"../TileMapLayer_Yellow",
+	3: $"../TileMapLayer_Green",
+	4: $"../TileMapLayer_Blue",
+	5: $"../TileMapLayer_Purple",
+}
+ 
+@onready var buttons = {
+	0: $Buttons/RedButton,
+	1: $Buttons/OrangeButton,
+	2: $Buttons/YellowButton,
+	3: $Buttons/GreenButton,
+	4: $Buttons/BlueButton,
+	5: $Buttons/PurpleButton,
+}
+ 
+var active_platform_id: int = -1
+ 
+func _ready() -> void:
+	# Esconde todas as plataformas no início
+	for id in platforms:
+		_set_platform_active(id, false)
+ 
+	# Conecta os sinais de todos os botões
+	for id in buttons:
+		buttons[id].button_activated.connect(_on_button_activated)
+		buttons[id].button_deactivated.connect(_on_button_deactivated)
+ 
+func _on_button_activated(color_id: int) -> void:
+	# Desativa a plataforma anterior se houver uma ativa
+	if active_platform_id != -1:
+		_set_platform_active(active_platform_id, false)
+ 
+	active_platform_id = color_id
+	_set_platform_active(color_id, true)
+ 
+func _on_button_deactivated(color_id: int) -> void:
+	# Só desativa se for a plataforma atualmente ativa
+	if active_platform_id == color_id:
+		_set_platform_active(color_id, false)
+		active_platform_id = -1
+ 
+func _set_platform_active(id: int, active: bool) -> void:
+	var platform = platforms[id]
+	platform.visible = active
+	# Ativa/desativa a colisão corretamente no TileMapLayer
+	if active:
+		platform.collision_layer = 1
+	else:
+		platform.collision_layer = 0

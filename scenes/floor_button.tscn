@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dr7i4fktrfwqt"]
+
+[ext_resource type="Script" uid="uid://kyq550sx1i6l" path="res://Button/floor_button.gd" id="1_2y242"]
+[ext_resource type="Texture2D" uid="uid://j28gqqa2vb3n" path="res://assets/sprites/slabs_e_outros.PNG" id="2_2y242"]
+[ext_resource type="Script" uid="uid://jtvmekgcst04" path="res://Button/button_orange.gd" id="3_xqbbt"]
+[ext_resource type="Script" uid="uid://dtdcc14jtrfmd" path="res://Button/button_yellow.gd" id="4_xqbbt"]
+[ext_resource type="Script" uid="uid://bdeb3vq1h0ly8" path="res://Button/button_grenn.gd" id="5_6rslu"]
+[ext_resource type="Script" uid="uid://opvaddtr31f5" path="res://Button/button_blue.gd" id="6_1s6fw"]
+[ext_resource type="Script" uid="uid://c28pkojg3iu50" path="res://Button/button_purple.gd" id="7_1s6fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqbbt"]
+size = Vector2(18, 12)
+
+[node name="Buttons" type="Area2D" unique_id=249855608]
+position = Vector2(13, 7)
+
+[node name="ButtonRed" type="Node2D" parent="." unique_id=1984804444]
+script = ExtResource("1_2y242")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonRed" unique_id=82974280]
+position = Vector2(12, 2)
+shape = SubResource("RectangleShape2D_xqbbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonRed" unique_id=969965265]
+position = Vector2(12.000001, 1)
+scale = Vector2(1.0555556, 1.0546875)
+texture = ExtResource("2_2y242")
+region_enabled = true
+region_rect = Rect2(-0.4796753, 64.613815, 17.174202, 16.473213)
+
+[node name="ButtonOrange" type="Area2D" parent="." unique_id=158457597]
+script = ExtResource("3_xqbbt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonOrange" unique_id=1167866627]
+position = Vector2(38, 2)
+shape = SubResource("RectangleShape2D_xqbbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonOrange" unique_id=1664416544]
+position = Vector2(38, 2)
+scale = Vector2(1.0555556, 1.0546875)
+texture = ExtResource("2_2y242")
+region_enabled = true
+region_rect = Rect2(0.7587395, 84.153015, 15.42173, 10.514816)
+
+[node name="ButtonYellow" type="Area2D" parent="." unique_id=1162386895]
+script = ExtResource("4_xqbbt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonYellow" unique_id=337560490]
+position = Vector2(68, 2)
+shape = SubResource("RectangleShape2D_xqbbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonYellow" unique_id=895153837]
+position = Vector2(68, 2)
+scale = Vector2(1.0555556, 1.0546875)
+texture = ExtResource("2_2y242")
+region_enabled = true
+region_rect = Rect2(33.595345, 66.62833, 14.0197525, 11.916794)
+
+[node name="ButtonGrenn" type="Area2D" parent="." unique_id=60322388]
+script = ExtResource("5_6rslu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonGrenn" unique_id=1118587514]
+position = Vector2(103.388885, 2.8007813)
+shape = SubResource("RectangleShape2D_xqbbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonGrenn" unique_id=1129076441]
+position = Vector2(103.388885, 2.8007813)
+scale = Vector2(1.0555556, 1.0546875)
+texture = ExtResource("2_2y242")
+region_enabled = true
+region_rect = Rect2(65.348854, 83.084564, 14.650642, 11.180756)
+
+[node name="ButtonBlue" type="Area2D" parent="." unique_id=2140201078]
+script = ExtResource("6_1s6fw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonBlue" unique_id=1937064275]
+position = Vector2(39.444443, 30.800781)
+shape = SubResource("RectangleShape2D_xqbbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonBlue" unique_id=913579669]
+position = Vector2(39.444443, 30.800781)
+scale = Vector2(1.0555556, 1.0546875)
+texture = ExtResource("2_2y242")
+region_enabled = true
+region_rect = Rect2(63.80668, 66.89175, 16.578362, 11.566299)
+
+[node name="ButtonPurple" type="Area2D" parent="." unique_id=1292750684]
+script = ExtResource("7_1s6fw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonPurple" unique_id=1178456637]
+position = Vector2(17, 31)
+shape = SubResource("RectangleShape2D_xqbbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="ButtonPurple" unique_id=1028169125]
+position = Vector2(17, 31)
+scale = Vector2(1.0555556, 1.0546875)
+texture = ExtResource("2_2y242")
+region_enabled = true
+region_rect = Rect2(33.24485, 82.751045, 14.370247, 12.617775)
