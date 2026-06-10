@@ -277,7 +277,7 @@ region_enabled = true
 region_rect = Rect2(33.24485, 82.751045, 14.370247, 12.617775)
 
 [node name="MovingPlataform" type="AnimatableBody2D" parent="." unique_id=641021349]
-position = Vector2(54, 274)
+position = Vector2(383.00003, 2071)
 scale = Vector2(7.5, 7.5)
 script = ExtResource("9_dugqu")
 
@@ -302,7 +302,7 @@ region_enabled = true
 region_rect = Rect2(-1.9185944, 15.839737, 18.193787, 13.062202)
 
 [node name="MovingPlataform3" type="AnimatableBody2D" parent="." unique_id=1940205401]
-position = Vector2(2, 128)
+position = Vector2(42, 924)
 scale = Vector2(7.5, 7.5)
 script = ExtResource("9_dugqu")
 
@@ -327,7 +327,7 @@ region_enabled = true
 region_rect = Rect2(-1.9185944, 15.839737, 18.193787, 13.062202)
 
 [node name="MovingPlataform2" type="AnimatableBody2D" parent="." unique_id=1474647780]
-position = Vector2(222, 273)
+position = Vector2(1663, 2083)
 scale = Vector2(7.5, 7.5)
 script = ExtResource("9_dugqu")
 
