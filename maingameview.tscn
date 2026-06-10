@@ -24,12 +24,13 @@ stretch = true
 
 [node name="SubViewportEmotion" type="SubViewport" parent="PlayerViewports/SubViewportContainerEmotion" unique_id=2095810160]
 handle_input_locally = false
-size = Vector2i(1152, 322)
+size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
 [node name="Node2D" parent="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion" unique_id=953528959 instance=ExtResource("2_cfqpw")]
 
 [node name="SubViewportContainerReason" type="SubViewportContainer" parent="PlayerViewports" unique_id=1546927966]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -38,7 +39,7 @@ stretch = true
 [node name="SubViewportReason" type="SubViewport" parent="PlayerViewports/SubViewportContainerReason" unique_id=119858487]
 handle_input_locally = false
 size = Vector2i(1152, 322)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Camera2DReason" type="Camera2D" parent="PlayerViewports/SubViewportContainerReason/SubViewportReason" unique_id=1614582455]
 position = Vector2(-256, 16)

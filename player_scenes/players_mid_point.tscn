@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b2vyjxorya0fs"]
+
+[ext_resource type="Script" uid="uid://2crcubqm6yd5" path="res://camera_scripts/players_mid_point.gd" id="1_ql24h"]
+
+[node name="PlayersMidPoint" type="Node2D" unique_id=1898348501]
+script = ExtResource("1_ql24h")

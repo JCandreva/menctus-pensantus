@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b3nowc8d1gflx" path="res://assets/players/emotion.png" id="2_nsrga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xlmdl"]
-size = Vector2(15.466663, 20.133333)
+size = Vector2(15.466663, 20.666668)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_holr6"]
 atlas = ExtResource("2_nsrga")
@@ -125,7 +125,7 @@ scale = Vector2(7.5, 7.5)
 script = ExtResource("1_o72c0")
 
 [node name="CollisionShape2DEmotion" type="CollisionShape2D" parent="." unique_id=311954047]
-position = Vector2(-0.5333352, 0.19999886)
+position = Vector2(-0.53333527, 0.46666628)
 shape = SubResource("RectangleShape2D_xlmdl")
 
 [node name="SpritePlayerEmotion" type="AnimatedSprite2D" parent="." unique_id=1881194686]

@@ -5,6 +5,7 @@ extends Area2D
 signal button_activated(color_id: int)
 signal button_deactivated(color_id: int)
 
+
 var is_pressed: bool = false
 
 func _ready() -> void:

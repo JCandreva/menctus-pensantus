@@ -10,12 +10,12 @@ extends Node2D
 }
  
 @onready var buttons = {
-	0: $Buttons/RedButton,
-	1: $Buttons/OrangeButton,
-	2: $Buttons/YellowButton,
-	3: $Buttons/GreenButton,
-	4: $Buttons/BlueButton,
-	5: $Buttons/PurpleButton,
+	0: $Buttons/ButtonRed,
+	1: $Buttons/ButtonOrange,
+	2: $Buttons/ButtonYellow,
+	3: $Buttons/ButtonGreen,
+	4: $Buttons/ButtonBlue,
+	5: $Buttons/ButtonPurple,
 }
  
 var active_platform_id: int = -1
@@ -45,10 +45,10 @@ func _on_button_deactivated(color_id: int) -> void:
 		active_platform_id = -1
  
 func _set_platform_active(id: int, active: bool) -> void:
-	var platform = platforms[id]
+	var platform: TileMapLayer = platforms[id]
 	platform.visible = active
 	# Ativa/desativa a colisão corretamente no TileMapLayer
 	if active:
-		platform.collision_layer = 1
+		platform.collision_enabled = true
 	else:
-		platform.collision_layer = 0
+		platform.collision_enabled = false

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dnq7a138yavb0" path="res://player_scenes/camera_2d_emotion.tscn" id="2_k1dh8"]
 [ext_resource type="PackedScene" uid="uid://bemsv3h82magg" path="res://player_scenes/player_emotion.tscn" id="3_k1dh8"]
 [ext_resource type="PackedScene" uid="uid://y2iq0iw0q5iu" path="res://player_scenes/player_reason.tscn" id="4_qsn0b"]
-[ext_resource type="Script" uid="uid://2crcubqm6yd5" path="res://camera_scripts/players_mid_point.gd" id="6_prgsm"]
+[ext_resource type="PackedScene" uid="uid://b2vyjxorya0fs" path="res://player_scenes/players_mid_point.tscn" id="5_k1dh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xmbx"]
 size = Vector2(2404.0073, 59.026367)
@@ -27,8 +27,7 @@ position = Vector2(41, 97)
 [node name="PlayerReason" parent="." unique_id=1906351908 instance=ExtResource("4_qsn0b")]
 position = Vector2(-256, 16)
 
-[node name="PlayersMidPoint" type="Node2D" parent="." unique_id=761988550]
-script = ExtResource("6_prgsm")
+[node name="PlayersMidPoint" parent="." unique_id=1898348501 instance=ExtResource("5_k1dh8")]
 
 [node name="FloorCollision" type="RigidBody2D" parent="." unique_id=1868313371]
 position = Vector2(-8, 344)
