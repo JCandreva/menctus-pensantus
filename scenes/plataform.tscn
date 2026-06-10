@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://y2iq0iw0q5iu" path="res://player_scenes/player_reason.tscn" id="11_y2ndj"]
 [ext_resource type="PackedScene" uid="uid://dnq7a138yavb0" path="res://player_scenes/camera_2d_emotion.tscn" id="12_fiqq1"]
 [ext_resource type="PackedScene" uid="uid://b2vyjxorya0fs" path="res://player_scenes/players_mid_point.tscn" id="13_y2ndj"]
+[ext_resource type="Script" uid="uid://bpe0cu0qsiie2" path="res://area_scripts/next_stage_area_pz1.gd" id="17_2k6ov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7680"]
 texture = ExtResource("1_lbiek")
@@ -142,6 +143,9 @@ size = Vector2(20, 173)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbiek"]
 size = Vector2(1390.25, 10.899994)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jqcl"]
+size = Vector2(565.5, 180)
 
 [node name="Node2D" type="Node2D" unique_id=2101709945]
 texture_filter = 1
@@ -414,3 +418,13 @@ freeze = true
 position = Vector2(4920, 1117.875)
 scale = Vector2(7.5, 7.5)
 shape = SubResource("RectangleShape2D_lbiek")
+
+[node name="NextStageArea" type="Area2D" parent="." unique_id=1943387513]
+position = Vector2(5396, 390)
+script = ExtResource("17_2k6ov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextStageArea" unique_id=2018023624]
+position = Vector2(-46, 8)
+shape = SubResource("RectangleShape2D_0jqcl")
+
+[connection signal="body_entered" from="NextStageArea" to="NextStageArea" method="_on_body_entered"]

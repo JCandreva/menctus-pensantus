@@ -41,6 +41,7 @@ func _on_button_activated(color_id: int) -> void:
 func _on_button_deactivated(color_id: int) -> void:
 	# Só desativa se for a plataforma atualmente ativa
 	if active_platform_id == color_id:
+		await get_tree().create_timer(6.0).timeout
 		_set_platform_active(color_id, false)
 		active_platform_id = -1
  

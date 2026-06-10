@@ -141,18 +141,6 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="HUD/TopHUD/TopRight" unique_id=374165780]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -143.0
-offset_top = 20.0
-offset_right = -21.0
-offset_bottom = 51.0
-grow_horizontal = 0
-text = "mudar camera"
-
 [node name="CenterHUD" type="HBoxContainer" parent="HUD" unique_id=1378977788]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -207,7 +195,5 @@ size_flags_horizontal = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1809654749]
 libraries/ = SubResource("AnimationLibrary_omsv4")
-
-[connection signal="button_down" from="HUD/TopHUD/TopRight/Button" to="." method="_on_button_button_down"]
 
 [editable path="PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D"]

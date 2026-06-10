@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bly3elcj4kg1s"]
+
+[node name="Credits" type="Control" unique_id=1803925283]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=480500863]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 1567.0
+bbcode_enabled = true
+text = "[b][font_size=36]Shattered Mind[/font_size]
+[font_size=24]by Ping 36[/font_size][/b]"
+scroll_active = false
+horizontal_alignment = 1
