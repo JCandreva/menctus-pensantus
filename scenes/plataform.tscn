@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bnbq7pbtabgve" path="res://scenes/plataform.gd" id="1_fiqq1"]
 [ext_resource type="Texture2D" uid="uid://j28gqqa2vb3n" path="res://assets/sprites/slabs_e_outros.PNG" id="1_lbiek"]
 [ext_resource type="Script" uid="uid://cwtrm3rt75hf1" path="res://Button/plataform_puzzle.gd" id="2_5m6qe"]
+[ext_resource type="Texture2D" uid="uid://cv6v0tru0rw4j" path="res://assets/backgrounds/bg_razao.png" id="2_qj7em"]
+[ext_resource type="Texture2D" uid="uid://c4w7ecg73wws0" path="res://assets/backgrounds/Emocao_cenario_ver1.PNG" id="3_2k6ov"]
 [ext_resource type="Script" uid="uid://kyq550sx1i6l" path="res://Button/floor_button.gd" id="3_rwwhq"]
 [ext_resource type="Script" uid="uid://jtvmekgcst04" path="res://Button/button_orange.gd" id="4_dugqu"]
 [ext_resource type="Script" uid="uid://dtdcc14jtrfmd" path="res://Button/button_yellow.gd" id="5_1jkt6"]
@@ -144,6 +146,16 @@ size = Vector2(1390.25, 10.899994)
 [node name="Node2D" type="Node2D" unique_id=2101709945]
 texture_filter = 1
 script = ExtResource("1_fiqq1")
+
+[node name="BackgroundReason" type="Sprite2D" parent="." unique_id=2208118]
+position = Vector2(1823.0005, 1574.75)
+scale = Vector2(12.05, 12.05)
+texture = ExtResource("2_qj7em")
+
+[node name="BackgroundEmotion" type="Sprite2D" parent="." unique_id=421864538]
+position = Vector2(4046, 418.00003)
+scale = Vector2(14.972222, 14.972223)
+texture = ExtResource("3_2k6ov")
 
 [node name="TileMapLayer_main" type="TileMapLayer" parent="." unique_id=1432051348]
 scale = Vector2(7.5, 7.5)
