@@ -6,7 +6,7 @@ extends Node
 @onready var subviewport_container_reason: SubViewportContainer = $PlayerViewports/SubViewportContainerReason
 
 # The camera lives permanently under SubViewportReason
-@onready var cameraReason = subviewport_reason.get_node("Camera2DReason")
+@onready var cameraReason: Camera2D = subviewport_reason.get_node("Camera2DReason")
 
 # We track the level root node dynamically
 @onready var current_level: Node2D = $PlayerViewports/SubViewportContainerEmotion/SubViewportEmotion/Node2D
@@ -95,7 +95,12 @@ func _on_button_button_down() -> void:
 	_change_camera()
 	
 	
-func change_scene_by_path(scene_path) -> void:
+func change_scene_by_path(scene_path: String) -> void:
 	var next_scene = load(scene_path).instantiate()
 	_change_scene(next_scene)
 	
+func change_cameras_zoom(new_zoom: Vector2) -> void:
+	if cameraEmotion:
+		cameraEmotion.zoom = new_zoom
+	if cameraReason:
+		cameraReason.zoom = new_zoom
