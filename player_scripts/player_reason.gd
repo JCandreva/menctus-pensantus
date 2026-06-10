@@ -13,6 +13,7 @@ var screen_size # Size of the game window.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_to_group("players")
 	add_to_group("reason")
 	screen_size = get_viewport_rect().size
 	spritePlayerReason.play()

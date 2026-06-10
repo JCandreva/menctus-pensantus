@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bab21qonh4mnn"]
 
+[ext_resource type="Script" uid="uid://bnbq7pbtabgve" path="res://scenes/plataform.gd" id="1_fiqq1"]
 [ext_resource type="Texture2D" uid="uid://j28gqqa2vb3n" path="res://assets/sprites/slabs_e_outros.PNG" id="1_lbiek"]
 [ext_resource type="Script" uid="uid://cwtrm3rt75hf1" path="res://Button/plataform_puzzle.gd" id="2_5m6qe"]
 [ext_resource type="Script" uid="uid://kyq550sx1i6l" path="res://Button/floor_button.gd" id="3_rwwhq"]
@@ -142,7 +143,7 @@ size = Vector2(1390.25, 10.899994)
 
 [node name="Node2D" type="Node2D" unique_id=2101709945]
 texture_filter = 1
-position = Vector2(30, -9)
+script = ExtResource("1_fiqq1")
 
 [node name="TileMapLayer_main" type="TileMapLayer" parent="." unique_id=1432051348]
 scale = Vector2(7.5, 7.5)
