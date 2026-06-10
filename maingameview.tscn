@@ -6,6 +6,60 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_agafp"]
 
+[sub_resource type="Animation" id="Animation_c3tgy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_agafp"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1.4142137, 1.4142137),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nsbir"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1.4640859, 1.4640859),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_omsv4"]
+_data = {
+&"RESET": SubResource("Animation_c3tgy"),
+&"fade_in": SubResource("Animation_agafp"),
+&"fade_out": SubResource("Animation_nsbir")
+}
+
 [node name="MainGameView" type="Node" unique_id=945622019]
 script = ExtResource("1_agafp")
 
@@ -58,6 +112,11 @@ limit_right = 1152
 limit_bottom = 648
 position_smoothing_enabled = true
 script = ExtResource("3_c3tgy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=784253582]
+offset_right = 1162.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 0)
 
 [node name="HUD" type="VBoxContainer" parent="." unique_id=88221840]
 anchors_preset = 15
@@ -145,6 +204,9 @@ size_flags_horizontal = 3
 [node name="CenterRight" type="Control" parent="HUD/BottomHUD" unique_id=1798440387]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1809654749]
+libraries/ = SubResource("AnimationLibrary_omsv4")
 
 [connection signal="button_down" from="HUD/TopHUD/TopRight/Button" to="." method="_on_button_button_down"]
 

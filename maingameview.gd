@@ -41,7 +41,7 @@ func _ready() -> void:
 
 func _change_camera() -> void:
 	camera_split = !camera_split # Quickly toggles true/false
-	
+
 	if camera_split:
 		subviewport_container_reason.visible = true
 		if cameraEmotion and pEmotion:
@@ -55,6 +55,8 @@ func _change_camera() -> void:
 
 
 func _change_scene(new_scene: Node2D) -> void:
+	$AnimationPlayer.play("fade_out")
+	await get_tree().create_timer(0.5).timeout
 	if not new_scene:
 		return
 		
@@ -82,6 +84,8 @@ func _change_scene(new_scene: Node2D) -> void:
 		
 	if cameraReason and pReason:
 		cameraReason.switch_target(pReason)
+	await get_tree().create_timer(0.25).timeout
+	$AnimationPlayer.play("fade_in")
 
 
 # Helper function to prevent repeating code when grabbing internal level nodes
