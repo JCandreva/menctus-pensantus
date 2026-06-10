@@ -94,9 +94,8 @@ func _update_level_references(level_node: Node2D) -> void:
 func _on_button_button_down() -> void:
 	_change_camera()
 	
-
-func _on_button_button2_down() -> void:
-	var next_scene = load("res://scenes/plataform.tscn").instantiate()
+	
+func change_scene_by_path(scene_path) -> void:
+	var next_scene = load(scene_path).instantiate()
 	_change_scene(next_scene)
-	_change_camera()
 	

@@ -20,3 +20,7 @@ func _process(delta: float) -> void:
 
 func switch_target(new_target: Node2D) -> void:
 	target = new_target
+
+
+func _on_exit_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.

@@ -5,12 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://bemsv3h82magg" path="res://player_scenes/player_emotion.tscn" id="3_k1dh8"]
 [ext_resource type="PackedScene" uid="uid://y2iq0iw0q5iu" path="res://player_scenes/player_reason.tscn" id="4_qsn0b"]
 [ext_resource type="PackedScene" uid="uid://b2vyjxorya0fs" path="res://player_scenes/players_mid_point.tscn" id="5_k1dh8"]
+[ext_resource type="Script" uid="uid://dy0047kot0typ" path="res://area_scripts/gallery_exit.gd" id="6_qsn0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xmbx"]
 size = Vector2(2404.0073, 59.026367)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8mys"]
 size = Vector2(72, 784)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syju0"]
+size = Vector2(153, 240)
 
 [node name="Node2D" type="Node2D" unique_id=953528959]
 texture_filter = 1
@@ -56,3 +60,14 @@ freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRightCollision" unique_id=116426912]
 shape = SubResource("RectangleShape2D_b8mys")
+
+[node name="Exit" type="Area2D" parent="." unique_id=1426752456]
+position = Vector2(1129.721, 192.48102)
+script = ExtResource("6_qsn0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=679455781]
+position = Vector2(-8.220947, 19.518982)
+shape = SubResource("RectangleShape2D_syju0")
+disabled = true
+
+[connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
