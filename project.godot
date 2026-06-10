@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="menctus-pensantus"
-run/main_scene="uid://cgu2annbp65w8"
+run/main_scene="uid://b3uewyjsivay5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/resizable=false
 
 [input]
 

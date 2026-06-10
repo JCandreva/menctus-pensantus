@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b3uewyjsivay5"]
+
+[ext_resource type="Texture2D" uid="uid://011lj2yfe3sk" path="res://assets/backgrounds/menu_bg.png" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://bcbt52qnmq5cp" path="res://title_screen.gd" id="1_ig5kc"]
+[ext_resource type="Texture2D" uid="uid://bl6ocauo8b5kf" path="res://assets/gui/menu_buttons.png" id="2_ig5kc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05l2w"]
+atlas = ExtResource("2_ig5kc")
+region = Rect2(16, 16, 48, 16)
+
+[node name="TitleScreen" type="Control" unique_id=908706451]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig5kc")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1328773626]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ak2if")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1622108612]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.999939
+offset_top = 8.000061
+offset_right = 24.000061
+offset_bottom = 24.000061
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+pivot_offset = Vector2(24.399994, 9.600002)
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_05l2w")
+
+[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
