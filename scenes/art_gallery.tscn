@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://y2iq0iw0q5iu" path="res://player_scenes/player_reason.tscn" id="4_qsn0b"]
 [ext_resource type="PackedScene" uid="uid://b2vyjxorya0fs" path="res://player_scenes/players_mid_point.tscn" id="5_k1dh8"]
 [ext_resource type="Script" uid="uid://dy0047kot0typ" path="res://area_scripts/gallery_exit.gd" id="6_qsn0b"]
+[ext_resource type="AudioStream" uid="uid://blwt3t0kr8xrd" path="res://assets/audio/titlescreen.mp3" id="8_syju0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xmbx"]
 size = Vector2(2404.0073, 59.026367)
@@ -71,5 +72,11 @@ script = ExtResource("6_qsn0b")
 position = Vector2(-8.220947, 19.518982)
 shape = SubResource("RectangleShape2D_syju0")
 disabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1206686053]
+stream = ExtResource("8_syju0")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]

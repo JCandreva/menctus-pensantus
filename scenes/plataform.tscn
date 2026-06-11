@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dnq7a138yavb0" path="res://player_scenes/camera_2d_emotion.tscn" id="12_fiqq1"]
 [ext_resource type="PackedScene" uid="uid://b2vyjxorya0fs" path="res://player_scenes/players_mid_point.tscn" id="13_y2ndj"]
 [ext_resource type="Script" uid="uid://bpe0cu0qsiie2" path="res://area_scripts/next_stage_area_pz1.gd" id="17_2k6ov"]
+[ext_resource type="AudioStream" uid="uid://c0f8wew04fl3m" path="res://assets/audio/puzzle1.ogg" id="18_0jqcl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7680"]
 texture = ExtResource("1_lbiek")
@@ -157,7 +158,7 @@ scale = Vector2(12.05, 12.05)
 texture = ExtResource("2_qj7em")
 
 [node name="BackgroundEmotion" type="Sprite2D" parent="." unique_id=421864538]
-position = Vector2(4046, 418.00003)
+position = Vector2(2441.0005, 381)
 scale = Vector2(14.972222, 14.972223)
 texture = ExtResource("3_2k6ov")
 
@@ -426,5 +427,11 @@ script = ExtResource("17_2k6ov")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextStageArea" unique_id=2018023624]
 position = Vector2(-46, 8)
 shape = SubResource("RectangleShape2D_0jqcl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1755684413]
+stream = ExtResource("18_0jqcl")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="NextStageArea" to="NextStageArea" method="_on_body_entered"]

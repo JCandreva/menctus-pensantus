@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bly3elcj4kg1s"]
 
+[ext_resource type="AudioStream" uid="uid://dd4w4wo3g2mat" path="res://assets/audio/credits.mp3" id="1_nm7lk"]
+
 [node name="Credits" type="Control" unique_id=1803925283]
 layout_mode = 3
 anchors_preset = 15
@@ -8,12 +10,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=480500863]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=713926867]
 layout_mode = 0
-offset_right = 1149.0
-offset_bottom = 1567.0
+offset_left = -13.0
+offset_top = -32.0
+offset_right = 1198.0
+offset_bottom = 678.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=480500863]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -574.5
+offset_top = -326.0
+offset_right = 574.5
+offset_bottom = 332.5
+grow_horizontal = 2
+grow_vertical = 2
 bbcode_enabled = true
-text = "[b][font_size=36]Shattered Mind[/font_size]
-[font_size=24]by Ping 36[/font_size][/b]"
+text = "
+[b][font_size=36]Shattered Mind[/font_size](demo)
+[font_size=24]by Ping 36[/font_size][/b]
+
+Artista e Producer
+Luana Verdugo(@ashlulua)
+
+Desenvolvedores
+Bernardo(@Becepop)
+Jorge Candreva(@Candreva)
+
+Game Designers
+Pedro Arthur(@pedroarthuror2005)
+Rafx(@Rafex_tech)
+
+Sound Designers
+João Soares(@JoaoSoares)
+Rian Santos(@Osemprerico)
+
+Músicas
+- Joseph Gilbert / Kistol - CRYSTAL CAVE
+- Fato Shadow - fato_shadow_-_in_my_dream
+- Gregor Quendel -10 - Granados - Spanish Dance No. 2, Oriental - Arranged for Strings"
 scroll_active = false
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1486659465]
+stream = ExtResource("1_nm7lk")
+volume_db = -10.0
+autoplay = true

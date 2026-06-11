@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://011lj2yfe3sk" path="res://assets/backgrounds/menu_bg.png" id="1_ak2if"]
 [ext_resource type="Script" uid="uid://bcbt52qnmq5cp" path="res://title_screen.gd" id="1_ig5kc"]
 [ext_resource type="Texture2D" uid="uid://bl6ocauo8b5kf" path="res://assets/gui/menu_buttons.png" id="2_ig5kc"]
+[ext_resource type="AudioStream" uid="uid://blwt3t0kr8xrd" path="res://assets/audio/titlescreen.mp3" id="4_05l2w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_05l2w"]
 atlas = ExtResource("2_ig5kc")
@@ -44,5 +45,11 @@ scale = Vector2(5, 5)
 pivot_offset = Vector2(24.399994, 9.600002)
 action_mode = 0
 texture_normal = SubResource("AtlasTexture_05l2w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1134194215]
+stream = ExtResource("4_05l2w")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
