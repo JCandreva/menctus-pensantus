@@ -4,8 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://cshwgj646esx2" path="res://scenes/art_gallery.tscn" id="2_cfqpw"]
 [ext_resource type="Script" uid="uid://b8fk5s2t8acea" path="res://camera_scripts/camera_2d_reason.gd" id="3_c3tgy"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_agafp"]
-
 [sub_resource type="Animation" id="Animation_c3tgy"]
 length = 0.001
 tracks/0/type = "value"
@@ -153,24 +151,6 @@ size_flags_horizontal = 3
 [node name="CenterMiddle" type="Control" parent="HUD/CenterHUD" unique_id=1891589781]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="HUD/CenterHUD/CenterMiddle" unique_id=62838310]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -120.5
-offset_top = -25.5
-offset_right = 121.5
-offset_bottom = 23.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "HUD FUNCIONANDO POR CIMA
-DA DIVISÃO OK"
-label_settings = SubResource("LabelSettings_agafp")
-horizontal_alignment = 1
 
 [node name="CenterRight" type="Control" parent="HUD/CenterHUD" unique_id=178253076]
 layout_mode = 2
