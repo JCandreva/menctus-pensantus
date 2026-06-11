@@ -34,7 +34,7 @@ func _on_button_activated(color_id: int) -> void:
 	# Desativa a plataforma anterior se houver uma ativa
 	if active_platform_id != -1:
 		_set_platform_active(active_platform_id, false)
- 
+ 	
 	active_platform_id = color_id
 	_set_platform_active(color_id, true)
  

@@ -173,17 +173,17 @@ tile_set = SubResource("TileSet_5m6qe")
 
 [node name="TileMapLayer_Orange" type="TileMapLayer" parent="." unique_id=667066706]
 scale = Vector2(7.5, 7.5)
-tile_map_data = PackedByteArray("AABCAAIAAAAIAAYAAABDAAIAAAAIAAYAAABEAAIAAAAIAAYAAABFAAIAAAAIAAYAAABGAAIAAAAIAAYAAAAgAAcAAAAIAAYAAAAhAAcAAAAIAAYAAAAiAAcAAAAIAAYAAAAjAAcAAAAIAAYAAAAkAAcAAAAIAAYAAABBAAIAAAAHAAYAAAAfAAcAAAAHAAYAAAAlAAcAAAAKAAYAAABHAAIAAAAKAAYAAAA=")
+tile_map_data = PackedByteArray("AABCAAIAAAAIAAYAAABDAAIAAAAIAAYAAABEAAIAAAAIAAYAAABFAAIAAAAIAAYAAABGAAIAAAAIAAYAAAAgAAcAAAAIAAYAAAAhAAcAAAAIAAYAAAAiAAcAAAAIAAYAAAAjAAcAAAAIAAYAAAAkAAcAAAAIAAYAAABBAAIAAAAHAAYAAAAfAAcAAAAHAAYAAAAlAAcAAAAKAAYAAABHAAIAAAAKAAYAAAA8AAcAAAAHAAYAAAA9AAcAAAAIAAYAAAA+AAcAAAAIAAYAAAA/AAcAAAAKAAYAAAA=")
 tile_set = SubResource("TileSet_5m6qe")
 
 [node name="TileMapLayer_Yellow" type="TileMapLayer" parent="." unique_id=124544330]
 scale = Vector2(7.5, 7.5)
-tile_map_data = PackedByteArray("AAAqAAUAAAAIAAMAAAArAAUAAAAIAAMAAAAsAAUAAAAIAAMAAAAtAAUAAAAIAAMAAAA6AAEAAAAIAAMAAAA7AAEAAAAIAAMAAAA8AAEAAAAIAAMAAAApAAUAAAAHAAMAAAA5AAEAAAAHAAMAAAAuAAUAAAAKAAMAAAA9AAEAAAAKAAMAAAA=")
+tile_map_data = PackedByteArray("AAAqAAUAAAAIAAMAAAArAAUAAAAIAAMAAAAsAAUAAAAIAAMAAAAtAAUAAAAIAAMAAAApAAUAAAAHAAMAAAAuAAUAAAAKAAMAAAA5AAIAAAAHAAMAAAA9AAIAAAAKAAMAAAA6AAIAAAAIAAMAAAA7AAIAAAAIAAMAAAA8AAIAAAAIAAMAAABCAAQAAAAHAAMAAABDAAQAAAAIAAMAAABEAAQAAAAKAAMAAAA=")
 tile_set = SubResource("TileSet_5m6qe")
 
 [node name="TileMapLayer_Green" type="TileMapLayer" parent="." unique_id=458744672]
 scale = Vector2(7.5, 7.5)
-tile_map_data = PackedByteArray("AAA6AAUAAAAIAAUAAAA7AAUAAAAIAAUAAAA8AAUAAAAIAAUAAAA9AAUAAAAIAAUAAAA+AAUAAAAIAAUAAAA/AAUAAAAIAAUAAAAoAAIAAAAIAAUAAAApAAIAAAAIAAUAAAAqAAIAAAAIAAUAAAArAAIAAAAIAAUAAAAsAAIAAAAIAAUAAAA5AAUAAAAHAAUAAAAnAAIAAAAHAAUAAAAtAAIAAAAKAAUAAABAAAUAAAAKAAUAAAA=")
+tile_map_data = PackedByteArray("AAA6AAUAAAAIAAUAAAA7AAUAAAAIAAUAAAA8AAUAAAAIAAUAAAA9AAUAAAAIAAUAAAA+AAUAAAAIAAUAAAA/AAUAAAAIAAUAAAA5AAUAAAAHAAUAAABAAAUAAAAKAAUAAAAnAAMAAAAHAAUAAAAtAAMAAAAKAAUAAAAoAAMAAAAIAAUAAAApAAMAAAAIAAUAAAAqAAMAAAAIAAUAAAArAAMAAAAIAAUAAAAsAAMAAAAIAAUAAABQAAYAAAAHAAUAAABRAAYAAAAKAAUAAAA=")
 tile_set = SubResource("TileSet_5m6qe")
 
 [node name="TileMapLayer_Blue" type="TileMapLayer" parent="." unique_id=804541117]
@@ -267,11 +267,11 @@ position = Vector2(59, 236)
 script = ExtResource("7_pc7qy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataform_puzzle/Buttons/ButtonBlue" unique_id=1751807437]
-position = Vector2(263.44446, 30.800781)
+position = Vector2(231.71109, 30.467447)
 shape = SubResource("RectangleShape2D_4tny2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Plataform_puzzle/Buttons/ButtonBlue" unique_id=1613061105]
-position = Vector2(263.44446, 30.800781)
+position = Vector2(231.71109, 30.467447)
 scale = Vector2(1.0555556, 1.0546875)
 texture = ExtResource("1_lbiek")
 region_enabled = true
@@ -282,11 +282,11 @@ position = Vector2(119, 236)
 script = ExtResource("8_pegd1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataform_puzzle/Buttons/ButtonPurple" unique_id=144913694]
-position = Vector2(208.38889, -33.671875)
+position = Vector2(171.98892, -33.138542)
 shape = SubResource("RectangleShape2D_fmndo")
 
 [node name="Sprite2D" type="Sprite2D" parent="Plataform_puzzle/Buttons/ButtonPurple" unique_id=388467875]
-position = Vector2(208.38889, -33.671875)
+position = Vector2(171.98892, -33.138542)
 scale = Vector2(1.0555556, 1.0546875)
 texture = ExtResource("1_lbiek")
 region_enabled = true
@@ -343,7 +343,7 @@ region_enabled = true
 region_rect = Rect2(-1.9185944, 15.839737, 18.193787, 13.062202)
 
 [node name="MovingPlataform2" type="AnimatableBody2D" parent="." unique_id=1474647780]
-position = Vector2(1663, 2083)
+position = Vector2(1654, 2078)
 scale = Vector2(7.5, 7.5)
 script = ExtResource("9_dugqu")
 

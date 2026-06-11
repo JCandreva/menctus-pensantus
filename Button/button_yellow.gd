@@ -12,11 +12,11 @@ func _ready() -> void:
 	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("reason"):
+	if body.is_in_group("reason") or body.is_in_group("player"):
 		is_pressed = true
 		button_activated.emit(color_id)
 
 func _on_body_exited(body: Node2D) -> void:
-	if body.is_in_group("reason"):
+	if body.is_in_group("reason") or body.is_in_group("player"):
 		is_pressed = false
 		button_deactivated.emit(color_id)
